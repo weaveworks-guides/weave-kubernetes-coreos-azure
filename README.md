@@ -89,14 +89,15 @@ Choose a suitable location, and then set the location variable by running:
 ~~~bash
 
 export AZ_LOCATION=‘<your-location>’
+
 ~~~
 
 The `create-kubernetes-cluster.js` script provisions a cluster for production use, and creates a ring of three dedicated etcd nodes with `kube-00` being the kubernetes master and the other two: `kube-01` and `kube-02` serving as workload nodes.
 
 To ensure that the free tier of Azure can reproduce this example without incurring any costs, all of the VMs are single-core. Later in this guide, how to add larger VMs is also described.
 
-![VMs in Azure](https://raw.githubusercontent.com/weaveworks/weave-kubernetes-coreos-azure/master/initial_cluster.png)
 
+![VMs in Azure](https://raw.githubusercontent.com/weaveworks/weave-kubernetes-coreos-azure/master/initial_cluster.png)
 
 Once the Azure VMs are finished setting up, you should see the following:
 
@@ -220,6 +221,7 @@ azure_wrapper/info: The hosts in this deployment are:
 'kube-04' ]
 azure_wrapper/info: Saved state into `./output/kube_8f984af944f572_deployment.yml`
 ~~~
+
 
 >Note: This step created a number of new files in the `./output` directory.
 
@@ -355,7 +357,9 @@ If you don't wish care about the Azure bill, you can tear down the cluster. It's
 ./destroy-cluster.js ./output/kube_8f984af944f572_deployment.yml
 ~~~
 
+
 >Note: make sure you use the _latest state file_, since after you scaled the app, a new one was created.
+
 
 As an aside you can use these scripts to deploy multiple clusters.
 
