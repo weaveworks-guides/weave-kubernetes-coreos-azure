@@ -61,8 +61,8 @@ Ensure the following are installed and configured for your operating system:
 To get started, first clone the guide directory and then change to the kubernetes/coreos/azure directory:
 
 ~~~bash
-git clone https://github.com/weaveworks/guides
-cd guides/kubernetes/coreos/azure
+git clone https://github.com/weaveworks/weave-kubernetes-coreos-azure
+cd weave-kubernetes-coreos-azure
 ~~~
 
 Install [Azure CLI](https://azure.microsoft.com/en-us/documentation/articles/xplat-cli-install/). 
@@ -200,7 +200,7 @@ core@kube-00 ~ $ weave status
 
 Two single-core nodes are certainly not enough for a production system. In this section you will scale the cluster by adding several larger nodes.
 
-Open another terminal window on your machine and change to the working directory: `guides/kubernetes/azure`
+Open another terminal window on your machine and change to the working directory: `weave-kubernetes-coreos-azure`
 
 First, set the size of new VMs:
 
