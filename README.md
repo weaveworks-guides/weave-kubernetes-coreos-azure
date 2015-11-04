@@ -99,7 +99,7 @@ The `create-kubernetes-cluster.js` script provisions a cluster for production us
 
 To ensure that the free tier of Azure can reproduce this example without incurring any costs, all of the VMs are single-core. Later in this guide, how to add larger VMs is also described.
 
-![VMs in Azure](initial_cluster.png)
+![VMs in Azure](https://raw.githubusercontent.com/weaveworks/weave-kubernetes-coreos-azure/master/initial_cluster.png)
 
 Once the Azure VMs are finished setting up, you should see the following:
 
