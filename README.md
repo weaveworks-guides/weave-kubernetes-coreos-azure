@@ -50,10 +50,10 @@ The example does not require any programming and will take about 15 minutes to c
 
 Ensure the following are installed and configured for your operating system:
 
-*[Git](http://git-scm.com/downloads)
-*[Node.js (https://nodejs.org/en/)
-*[Azure CLI](https://azure.microsoft.com/en-us/documentation/articles/xplat-cli-install/)
-*A valid [Azure Cloud Services Account](https://azure.microsoft.com/en-us/)
+* [Git](http://git-scm.com/downloads)
+* [Node.js](https://nodejs.org/en/)
+* [Azure CLI](https://azure.microsoft.com/en-us/documentation/articles/xplat-cli-install/)
+* A valid [Azure Cloud Services Account](https://azure.microsoft.com/en-us/)
 
 
 ## Setting up the Cluster
@@ -92,7 +92,7 @@ azure vm location list
 Choose a suitable location, and then set the location variable by running: 
 
 ~~~bash
-    export AZ_LOCATION=‘<your-location>’
+export AZ_LOCATION=‘<your-location>’
 ~~~
 
 The `create-kubernetes-cluster.js` script provisions a cluster for production use, and creates a ring of three dedicated etcd nodes with `kube-00` being the kubernetes master and the other two: `kube-01` and `kube-02` serving as workload nodes. 
