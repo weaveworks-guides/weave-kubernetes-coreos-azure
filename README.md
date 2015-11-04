@@ -4,7 +4,7 @@ title: Kubernetes with Weave on CoreOS
 shorttitle: Kubernetes with Weave on CoreOS and Microsoft Azure
 description: Kubernetes with Weave & Microsoft Azure
 tags: ubuntu, Kubernetes, Azure, CoreOS 
-permalink: /guides/kubernetes/os/coreos/azure/kubernetes-azure-coreos.html
+permalink: /guides/platform/kubernetes/os/coreos/cloud/azure/index.html
 sidebarpath: /start/kubernetes
 sidebarweight: 7
 ---
