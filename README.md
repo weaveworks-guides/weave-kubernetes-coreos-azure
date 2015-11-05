@@ -1,14 +1,13 @@
 ---
 layout: guides
-title: Kubernetes with Weave on CoreOS 
+title: Kubernetes with Weave on CoreOS and Microsoft Azure
 shorttitle: Kubernetes with Weave on CoreOS and Microsoft Azure
 description: Kubernetes with Weave & Microsoft Azure
 tags: ubuntu, Kubernetes, Azure, CoreOS 
 permalink: /guides/platform/kubernetes/os/coreos/cloud/azure/index.html
 sidebarpath: /start/kubernetes-azure
-sidebarweight: 7
+sidebarweight: 46
 ---
-
 
 This example demonstrates how a Weave network integrates with Google Kubernetes clusters on CoreOS in the Microsoft Azure cloud management system.
 
