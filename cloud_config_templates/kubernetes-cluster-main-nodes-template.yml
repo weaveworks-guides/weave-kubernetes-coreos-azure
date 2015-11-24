@@ -3,6 +3,12 @@
 ## are going to deploy.
 
 write_files:
+  - path: /etc/weave.env
+    permissions: '0600'
+    owner: root
+    content: |
+      WEAVEPROXY_ARGS="--rewrite-inspect --without-dns"
+
   - path: /opt/bin/curl-retry.sh
     permissions: '0755'
     owner: root
@@ -121,7 +127,7 @@ coreos:
         [Service]
         EnvironmentFile=-/etc/weave.%H.env
         EnvironmentFile=-/etc/weave.env
-        ExecStartPre=/opt/bin/weave launch-proxy --rewrite-inspect --without-dns
+        ExecStartPre=/opt/bin/weave launch-proxy $WEAVEPROXY_ARGS
         ExecStart=/usr/bin/docker attach weaveproxy
         Restart=on-failure
         ExecStop=/opt/bin/weave stop-proxy
