@@ -101,7 +101,7 @@ To ensure that the free tier of Azure can reproduce this example without incurri
 Once the Azure VMs are finished setting up, you should see the following:
 
 ~~~bash
-azure_wrapper/info: Saved SSH config, you can use it like so: `ssh -F ./output/kube_1c1496016083b4_ssh_conf &lt;hostname&gt;`
+azure_wrapper/info: Saved SSH config, you can use it like so: `ssh -F ./output/kube_1c1496016083b4_ssh_conf <hostname>;`
 azure_wrapper/info: The hosts in this deployment are:
 [ 'etcd-00', 'etcd-01', 'etcd-02', 'kube-00', 'kube-01', 'kube-02' ]
 azure_wrapper/info: Saved state into `./output/kube_1c1496016083b4_deployment.yml`
@@ -114,6 +114,14 @@ ssh -F ./output/kube_1c1496016083b4_ssh_conf kube-00
 ~~~
 
 &gt; Note: the config file name will be different, make sure to use the one you see.
+
+There is currently an issue where `$public_ipv4` is not substituted when using ARM mode. This makes
+the kube services unable to start. We manually replace with the Public IP assigned the respective NIC.
+
+~~~bash
+core@kube-00 ~ $ sudo sed -i 's/$public_ipv4/<public-ip-of-nic>/g' /var/lib/waagent/PublicData
+core@kube-00 ~ $ sudo coreos-cloudinit /var/lib/waagent/PublicData
+~~~
 
 Check that the nodes are in the cluster:
 
@@ -158,7 +166,7 @@ redis-slave-3nbce 1/1 Running 0 4m
 
 With the Kubernetes cluster deployed and running, Weave has found all three nodes. This portion was automated, and weave was installed and launched by the setup script.
 
-To manually launch weave, all that is required is the following: `weave launch`, `weave eval$(weave env)` and `weave connect &lt;ip of host&gt;`.
+To manually launch weave, all that is required is the following: `weave launch`, `weave eval$(weave env)` and `weave connect <ip of host>`.
 
 For more information see ["Weave -- Weaving Containers in Applications"](https://github.com/weaveworks/weave#readme)
 
