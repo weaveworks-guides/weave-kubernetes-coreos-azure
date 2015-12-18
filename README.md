@@ -120,7 +120,7 @@ the kube services unable to start. We manually replace with the Public IP assign
 
 ~~~bash
 core@kube-00 ~ $ sudo sed -i 's/$public_ipv4/<public-ip-of-nic>/g' /var/lib/waagent/CustomData
-core@kube-00 ~ $ sudo coreos-cloudinit /var/lib/waagent/CustomData
+core@kube-00 ~ $ sudo coreos-cloudinit --from-file /var/lib/waagent/CustomData
 ~~~
 
 Check that the nodes are in the cluster:
