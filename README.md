@@ -173,29 +173,31 @@ For more information see ["Weave -- Weaving Containers in Applications"](https:/
 ~~~bash
 core@kube-00 ~ $ weave status
 
-Version: 1.2.0
+        Version: 1.4.0
 
-Service: router
-Protocol: weave 1..2
-Name: 9a:74:84:f8:a0:9e(kube-00)
-Encryption: enabled
-PeerDiscovery: enabled
-Targets: 0
-Connections: 1 (1 established)
-Peers: 2 (with 2 established connections)
+        Service: router
+       Protocol: weave 1..2
+           Name: 0e:36:80:57:5d:fb(kube-00)
+     Encryption: enabled
+  PeerDiscovery: enabled
+        Targets: 0
+    Connections: 2 (2 established)
+          Peers: 3 (with 6 established connections)
+ TrustedSubnets: none
 
-Service: ipam
-Consensus: achieved
-Range: [10.32.0.0-10.48.0.0)
-DefaultSubnet: 10.32.0.0/12
+        Service: ipam
+         Status: ready
+          Range: 10.32.0.0-10.47.255.255
+  DefaultSubnet: 10.32.0.0/12
 
-Service: dns
-Domain: weave.local.
-TTL: 1
-Entries: 0
+        Service: dns
+         Domain: weave.local.
+       Upstream: 168.63.129.16
+            TTL: 1
+        Entries: 0
 
-Service: proxy
-Address: unix:///var/run/weave/weave.sock
+        Service: proxy
+        Address: unix:///var/run/weave/weave.sock
 ~~~
 
 ## Scaling the Application
