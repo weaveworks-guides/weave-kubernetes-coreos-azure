@@ -6,6 +6,8 @@ var kube = require('./lib/deployment_logic/kubernetes.js');
 azure.create_config('kube', { 'etcd': 3, 'kube': 3 });
 
 azure.run_task_queue([
+  azure.queue_configure_arm_mode(),
+  azure.queue_default_resource_group(),
   azure.queue_default_network(),
   azure.queue_storage_if_needed(),
   azure.queue_machines('etcd', 'stable',
