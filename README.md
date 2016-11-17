@@ -37,7 +37,7 @@ AZ_SUBSCRIPTION=<id> AZ_LOCATION="East US" ./create-kubernetes-cluster.js
 AZ_VM_COREOS_CHANNEL=beta ./create-kubernetes-cluster.js
 ```
 
-![VMs in Azure](/images/docs/initial_cluster.png)
+![VMs in Azure](initial_cluster.png)
 
 Once the creation of Azure VMs has finished, you should see the following:
 
