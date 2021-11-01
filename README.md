@@ -1,3 +1,24 @@
+# Legacy Weave Getting Started Guides
+
+**Note:** The guides in here haven't been updated in a while.
+They might or might not work for you. We are keeping them around for informational purposes.
+
+For up-to-date documentation around products and projects started by Weaveworks, please refer to:
+
+Weaveworks products: <https://weave.works/docs>
+
+Open Source projects started at Weaveworks:
+
+- Cortex (CNCF): <https://cortexmetrics.io/docs>
+- Flagger (CNCF): <https://docs.flagger.app>
+- Flux (CNCF): <https://fluxcd.io/docs>
+- Grafanalib: <https://grafanalib.rtfd.org>
+- Ignite: <https://ignite.rtfd.org>
+- Weave GitOps: <https://docs.gitops.weave.works>
+- wksctl: <https://wksctl.rtfd.org>
+
+---
+
 In this guide I will demonstrate how to deploy a Kubernetes cluster to Azure cloud. You will be using CoreOS with Weave, which implements simple and secure networking, in a transparent, yet robust way. The purpose of this guide is to provide an out-of-the-box implementation that can ultimately be taken into production with little change. It will demonstrate how to provision a dedicated Kubernetes master and etcd nodes, and show how to scale the cluster with ease.
 
 ### Prerequisites
